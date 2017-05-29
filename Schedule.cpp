@@ -105,12 +105,12 @@ void Schedule::step(int layer) {
 			if (j > 1) {
 				fout << "Store," << store_inst.at(j-2) << "," << i << "\n";
 			}
-			fout << "Sync," << i << "\n";
+			fout << "Sync," << "0," << i << "\n";
 			fout << "Comp," << comp_inst.at(j) << "," << i << "\n";
 		}
 
 		fout << "Sotre," << store_inst.at(iter1-2) << "," << i << "\n";
-		fout << "Sync," << i << "\n";
+		fout << "Sync," << "0," << i << "\n";
 		fout << "Store," << store_inst.at(iter1-1) << "," << i << "\n";
 
 	}
@@ -121,11 +121,11 @@ void Schedule::step(int layer) {
 			if (j > 1) {
 				fout << "Store," << store_inst.at(j-2) << "," << i << "\n";
 			}
-			fout << "Sync," << i << "\n";
+			fout << "Sync," << "0," << i << "\n";
 			fout << "Comp," << comp_inst.at(j) << "," << i << "\n";
 		}
 		fout << "Sotre," << store_inst.at(iter2-2) << "," << i << "\n";
-		fout << "Sync," << i << "\n";
+		fout << "Sync," << "0," << i << "\n";
 		fout << "Store," << store_inst.at(iter2-1) << "," << i << "\n";
 
 	}
